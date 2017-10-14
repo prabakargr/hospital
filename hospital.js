@@ -7,6 +7,13 @@ $(document).ready(function(){
 			adhar:$("#adhar").val(),
 			address:$("#address").val()
 		}
-		$.post("https://59e0f86c5142a10012463180.mockapi.io/hospital",patient)
+		$.post("https://59e0f86c5142a10012463180.mockapi.io/hospital",patient,function(){
+			$("#name").val("");
+			$("#age").val("");
+			$("#sex").val("");
+			$("#adhar").val("");
+			$("#address").val("");
+		})
+		console.log(patient)
 	});
 });
